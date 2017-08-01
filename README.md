@@ -6,7 +6,8 @@ Currently this app server library only supports sending Messages/Notifications v
 
 See original Firebase docs: https://firebase.google.com/docs/
 
-#Setup
+Setup
+-----
 
 Install via Composer:
 
@@ -22,7 +23,8 @@ Or add this to your composer.json and run "composer update":
 }
 ```
 
-#Send message to Device
+Send message to Device
+----------------------
 
 ```php
 use sngrl\PhpFirebaseCloudMessaging\Client;
@@ -48,7 +50,8 @@ var_dump($response->getStatusCode());
 var_dump($response->getBody()->getContents());
 ```
 
-#Send message to multiple Devices
+Send message to multiple Devices
+--------------------------------
 
 ```php
 ...
@@ -64,7 +67,8 @@ $message
 ...
 ```
 
-#Send message to Topic
+Send message to Topic
+---------------------
 
 ```php
 use sngrl\PhpFirebaseCloudMessaging\Client;
@@ -90,7 +94,8 @@ var_dump($response->getStatusCode());
 var_dump($response->getBody()->getContents());
 ```
 
-#Send message to multiple Topics
+Send message to multiple Topics
+-------------------------------
 
 See Firebase documentation for sending to [combinations of multiple topics](https://firebase.google.com/docs/cloud-messaging/topic-messaging#sending_topic_messages_from_the_server).
 
@@ -110,7 +115,8 @@ $message
 ...
 ```
 
-#Subscribe user to the topic
+Subscribe user to the topic
+---------------------------
 
 ```php
 use sngrl\PhpFirebaseCloudMessaging\Client;
@@ -125,7 +131,8 @@ var_dump($response->getStatusCode());
 var_dump($response->getBody()->getContents());
 ```
 
-#Remove user subscription to the topic
+Remove user subscription to the topic
+-------------------------------------
 
 ```php
 use sngrl\PhpFirebaseCloudMessaging\Client;
