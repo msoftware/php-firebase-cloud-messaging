@@ -1,4 +1,5 @@
 # PHP Firebase Cloud Messaging
+
 PHP API for Firebase Cloud Messaging from Google.
 
 Currently this app server library only supports sending Messages/Notifications via HTTP.
@@ -6,21 +7,24 @@ Currently this app server library only supports sending Messages/Notifications v
 See original Firebase docs: https://firebase.google.com/docs/
 
 #Setup
+
 Install via Composer:
-```
-composer require sngrl/php-firebase-cloud-messaging
+
+```bash
+composer require pane-e-design/php-firebase-cloud-messaging
 ```
 
 Or add this to your composer.json and run "composer update":
 
-```
+```bash
 "require": {
-    "sngrl/php-firebase-cloud-messaging": "dev-master"
+    "pane-e-design/php-firebase-cloud-messaging": "dev-master"
 }
 ```
 
 #Send message to Device
-```
+
+```php
 use sngrl\PhpFirebaseCloudMessaging\Client;
 use sngrl\PhpFirebaseCloudMessaging\Message;
 use sngrl\PhpFirebaseCloudMessaging\Recipient\Device;
@@ -46,7 +50,7 @@ var_dump($response->getBody()->getContents());
 
 #Send message to multiple Devices
 
-```
+```php
 ...
 $message = new Message();
 $message->setPriority('high');
@@ -59,9 +63,10 @@ $message
 ;
 ...
 ```
+
 #Send message to Topic
 
-```
+```php
 use sngrl\PhpFirebaseCloudMessaging\Client;
 use sngrl\PhpFirebaseCloudMessaging\Message;
 use sngrl\PhpFirebaseCloudMessaging\Recipient\Topic;
@@ -89,7 +94,7 @@ var_dump($response->getBody()->getContents());
 
 See Firebase documentation for sending to [combinations of multiple topics](https://firebase.google.com/docs/cloud-messaging/topic-messaging#sending_topic_messages_from_the_server).
 
-```
+```php
 ...
 $message = new Message();
 $message->setPriority('high');
@@ -106,7 +111,8 @@ $message
 ```
 
 #Subscribe user to the topic
-```
+
+```php
 use sngrl\PhpFirebaseCloudMessaging\Client;
 
 $server_key = '_YOUR_SERVER_KEY_';
@@ -120,7 +126,8 @@ var_dump($response->getBody()->getContents());
 ```
 
 #Remove user subscription to the topic
-```
+
+```php
 use sngrl\PhpFirebaseCloudMessaging\Client;
 
 $server_key = '_YOUR_SERVER_KEY_';
