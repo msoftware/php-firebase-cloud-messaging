@@ -1,20 +1,27 @@
 <?php
-namespace sngrl\PhpFirebaseCloudMessaging\Tests;
 
-use sngrl\PhpFirebaseCloudMessaging\Client;
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Topic;
-use sngrl\PhpFirebaseCloudMessaging\Message;
+namespace PaneeDesign\PhpFirebaseCloudMessaging\Tests;
 
-use GuzzleHttp;
+use PaneeDesign\PhpFirebaseCloudMessaging\Client;
+use PaneeDesign\PhpFirebaseCloudMessaging\Recipient\Topic;
+use PaneeDesign\PhpFirebaseCloudMessaging\Message;
+
 use GuzzleHttp\Psr7\Response;
 
+/**
+ * @author Fabiano Roberto <fabiano@paneedesign.com>
+ */
 class ClientTest extends PhpFirebaseCloudMessagingTestCase
 {
+    /**
+     * @var Client
+     */
     private $fixture;
 
     protected function setUp()
     {
         parent::setUp();
+
         $this->fixture = new Client();
     }
 
@@ -23,9 +30,10 @@ class ClientTest extends PhpFirebaseCloudMessagingTestCase
         $apiKey = 'key';
         $headers = array(
             'Authorization' => sprintf('key=%s', $apiKey),
-            'Content-Type' => 'application/json'
+            'Content-Type' => 'application/json',
         );
 
+        /* @var \Mockery\Mock|\GuzzleHttp\Client $guzzle */
         $guzzle = \Mockery::mock(\GuzzleHttp\Client::class);
         $guzzle->shouldReceive('post')
             ->once()

@@ -1,13 +1,13 @@
 <?php
 
-namespace sngrl\PhpFirebaseCloudMessaging;
+namespace PaneeDesign\PhpFirebaseCloudMessaging;
 
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Recipient;
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Topic;
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Device;
+use PaneeDesign\PhpFirebaseCloudMessaging\Recipient\Recipient;
+use PaneeDesign\PhpFirebaseCloudMessaging\Recipient\Topic;
+use PaneeDesign\PhpFirebaseCloudMessaging\Recipient\Device;
 
 /**
- * @author fabianoroberto
+ * @author Fabiano Roberto <fabiano@paneedesign.com>
  */
 class Message implements \JsonSerializable
 {

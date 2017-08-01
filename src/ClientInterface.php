@@ -1,12 +1,10 @@
 <?php
-namespace sngrl\PhpFirebaseCloudMessaging;
+namespace PaneeDesign\PhpFirebaseCloudMessaging;
 
 use GuzzleHttp;
 
 /**
- *
- * @author sngrl
- *
+ * @author Fabiano Roberto <fabiano@paneedesign.com>
  */
 interface ClientInterface
 {

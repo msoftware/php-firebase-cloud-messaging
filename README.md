@@ -27,10 +27,10 @@ Send message to Device
 ----------------------
 
 ```php
-use sngrl\PhpFirebaseCloudMessaging\Client;
-use sngrl\PhpFirebaseCloudMessaging\Message;
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Device;
-use sngrl\PhpFirebaseCloudMessaging\Notification;
+use PaneeDesign\PhpFirebaseCloudMessaging\Client;
+use PaneeDesign\PhpFirebaseCloudMessaging\Message;
+use PaneeDesign\PhpFirebaseCloudMessaging\Recipient\Device;
+use PaneeDesign\PhpFirebaseCloudMessaging\Notification;
 
 $server_key = '_YOUR_SERVER_KEY_';
 $client = new Client();
@@ -71,10 +71,10 @@ Send message to Topic
 ---------------------
 
 ```php
-use sngrl\PhpFirebaseCloudMessaging\Client;
-use sngrl\PhpFirebaseCloudMessaging\Message;
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Topic;
-use sngrl\PhpFirebaseCloudMessaging\Notification;
+use PaneeDesign\PhpFirebaseCloudMessaging\Client;
+use PaneeDesign\PhpFirebaseCloudMessaging\Message;
+use PaneeDesign\PhpFirebaseCloudMessaging\Recipient\Topic;
+use PaneeDesign\PhpFirebaseCloudMessaging\Notification;
 
 $server_key = '_YOUR_SERVER_KEY_';
 $client = new Client();
@@ -119,7 +119,7 @@ Subscribe user to the topic
 ---------------------------
 
 ```php
-use sngrl\PhpFirebaseCloudMessaging\Client;
+use PaneeDesign\PhpFirebaseCloudMessaging\Client;
 
 $server_key = '_YOUR_SERVER_KEY_';
 $client = new Client();
@@ -135,7 +135,7 @@ Remove user subscription to the topic
 -------------------------------------
 
 ```php
-use sngrl\PhpFirebaseCloudMessaging\Client;
+use PaneeDesign\PhpFirebaseCloudMessaging\Client;
 
 $server_key = '_YOUR_SERVER_KEY_';
 $client = new Client();

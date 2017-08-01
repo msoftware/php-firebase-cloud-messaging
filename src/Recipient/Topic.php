@@ -1,7 +1,10 @@
 <?php
 
-namespace sngrl\PhpFirebaseCloudMessaging\Recipient;
+namespace PaneeDesign\PhpFirebaseCloudMessaging\Recipient;
 
+/**
+ * @author Fabiano Roberto <fabiano@paneedesign.com>
+ */
 class Topic extends Recipient
 {
     /**

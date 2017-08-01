@@ -1,8 +1,9 @@
 <?php
 
-namespace sngrl\PhpFirebaseCloudMessaging;
+namespace PaneeDesign\PhpFirebaseCloudMessaging;
 
 /**
+ * @author Fabiano Roberto <fabiano@paneedesign.com>
  * @link https://firebase.google.com/docs/cloud-messaging/http-server-ref#notification-payload-support
  */
 class Notification extends Message

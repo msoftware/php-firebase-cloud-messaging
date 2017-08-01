@@ -1,38 +1,46 @@
 <?php
-namespace sngrl\PhpFirebaseCloudMessaging\Tests;
 
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Recipient;
-use sngrl\PhpFirebaseCloudMessaging\Message;
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Topic;
-use sngrl\PhpFirebaseCloudMessaging\Notification;
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Device;
+namespace PaneeDesign\PhpFirebaseCloudMessaging\Tests;
 
+use PaneeDesign\PhpFirebaseCloudMessaging\Recipient\Recipient;
+use PaneeDesign\PhpFirebaseCloudMessaging\Message;
+use PaneeDesign\PhpFirebaseCloudMessaging\Recipient\Topic;
+use PaneeDesign\PhpFirebaseCloudMessaging\Notification;
+use PaneeDesign\PhpFirebaseCloudMessaging\Recipient\Device;
+
+/**
+ * @author Fabiano Roberto <fabiano@paneedesign.com>
+ */
 class MessageTest extends PhpFirebaseCloudMessagingTestCase
 {
+    /**
+     * @var Message
+     */
     private $fixture;
 
     protected function setUp()
     {
         parent::setUp();
+
         $this->fixture = new Message();
     }
 
-    public function testThrowsExceptionWhenDifferentRecepientTypesAreRegistered()
+    public function testThrowsExceptionWhenDifferentRecipientTypesAreRegistered()
     {
-        $this->setExpectedException(\InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
         $this->fixture->addRecipient(new Topic('breaking-news'))
             ->addRecipient(new Recipient());
     }
 
-    public function testThrowsExceptionWhenNoRecepientWasAdded()
+    public function testThrowsExceptionWhenNoRecipientWasAdded()
     {
-        $this->setExpectedException(\UnexpectedValueException::class);
+        $this->expectException(\UnexpectedValueException::class);
         $this->fixture->jsonSerialize();
     }
 
     public function testThrowsExceptionWhenMultipleTopicsWereGiven()
     {
-        $this->setExpectedException(\UnexpectedValueException::class);
+        $this->expectException(\UnexpectedValueException::class);
         $this->fixture->addRecipient(new Topic('breaking-news'))
             ->addRecipient(new Topic('another topic'));
 
