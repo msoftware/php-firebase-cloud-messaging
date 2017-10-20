@@ -12,14 +12,14 @@ Setup
 Install via Composer:
 
 ```bash
-composer require pane-e-design/php-firebase-cloud-messaging
+composer require paneedesign/php-firebase-cloud-messaging
 ```
 
 Or add this to your composer.json and run "composer update":
 
 ```bash
 "require": {
-    "pane-e-design/php-firebase-cloud-messaging": "dev-master"
+    "paneedesign/php-firebase-cloud-messaging": "^1.0"
 }
 ```
 
